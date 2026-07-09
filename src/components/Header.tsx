@@ -39,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, isAnimating 
         )}
         <button
           onClick={toggleTheme}
-          className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 transition-colors shadow-sm cursor-pointer"
+          className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-200 transition-colors shadow-sm cursor-pointer"
           title="Toggle Light/Dark Theme"
         >
           {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

@@ -842,7 +842,6 @@ export default function App() {
           />
 
           <StatsPanel stats={stats} algorithmName={ALGORITHM_DETAILS[algorithm].name} />
-          <InfoPanel algorithm={algorithm} />
         </div>
 
         {/* Right Column - Map Canvas & Live Inspector Cards */}
@@ -873,6 +872,8 @@ export default function App() {
               onExportComparison={handleExportComparison}
             />
           )}
+
+          <InfoPanel algorithm={algorithm} />
         </div>
       </main>
 

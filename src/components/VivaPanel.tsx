@@ -21,7 +21,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
         <div className="flex items-center gap-2">
           <Cpu className="w-5 h-5 text-green-500 animate-pulse" />
           <div>
-            <h4 className="font-bold text-sm text-zinc-850 dark:text-zinc-150">
+            <h4 className="font-bold text-sm text-zinc-800 dark:text-zinc-100">
               Enable Viva Mode
             </h4>
             <p className="text-[10px] text-zinc-500">
@@ -62,7 +62,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
         {/* Node Status */}
-        <div className="space-y-3 bg-zinc-50 dark:bg-zinc-800/20 p-3 rounded-xl border border-zinc-200/40 dark:border-zinc-850">
+        <div className="space-y-3 bg-zinc-50 dark:bg-zinc-800/20 p-3 rounded-xl border border-zinc-200/40 dark:border-zinc-800">
           <div>
             <span className="text-zinc-500 dark:text-zinc-300 block text-[10px] uppercase font-bold">Active Pathfinder</span>
             <span className="font-extrabold text-zinc-800 dark:text-zinc-100">{algorithm}</span>
@@ -92,7 +92,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
             )}
           </div>
 
-          <div className="grid grid-cols-3 gap-2 border-t border-zinc-200/50 dark:border-zinc-850 pt-2 font-mono text-[10px]">
+          <div className="grid grid-cols-3 gap-2 border-t border-zinc-200/50 dark:border-zinc-800 pt-2 font-mono text-[10px]">
             <div>
               <span className="text-zinc-500 dark:text-zinc-300 block font-bold">Distance (g)</span>
               <p className="font-extrabold text-zinc-800 dark:text-zinc-100 text-xs mt-0.5">
@@ -129,7 +129,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
             </span>
             
             {slicedOpenSet.length > 0 ? (
-              <div className="flex flex-wrap gap-1 max-h-[85px] overflow-y-auto p-1.5 bg-zinc-50 dark:bg-zinc-800/20 rounded-lg border border-zinc-200/30 dark:border-zinc-850">
+              <div className="flex flex-wrap gap-1 max-h-[85px] overflow-y-auto p-1.5 bg-zinc-50 dark:bg-zinc-800/20 rounded-lg border border-zinc-200/30 dark:border-zinc-800">
                 {slicedOpenSet.map((node, idx) => (
                   <span
                     key={idx}
@@ -146,7 +146,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
                 )}
               </div>
             ) : (
-              <div className="text-[10px] text-zinc-400 italic py-3 text-center border border-dashed border-zinc-200 dark:border-zinc-850 rounded-lg">
+              <div className="text-[10px] text-zinc-405 italic py-3 text-center border border-dashed border-zinc-200 dark:border-zinc-800 rounded-lg">
                 Empty (Idle state)
               </div>
             )}

@@ -30,7 +30,7 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({ stats, algorithmName }) 
           <span className="text-[9px] font-extrabold px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/35 text-blue-600 dark:text-blue-400 uppercase tracking-wider">
             Live Telemetry
           </span>
-          <h3 className="text-sm font-extrabold text-zinc-850 dark:text-zinc-100 mt-1">{algorithmName}</h3>
+          <h3 className="text-sm font-extrabold text-zinc-800 dark:text-zinc-100 mt-1">{algorithmName}</h3>
         </div>
         <div className="text-right">
           <span className="text-[10px] text-zinc-500 dark:text-zinc-300 font-bold">Map Explored</span>
@@ -39,11 +39,11 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({ stats, algorithmName }) 
       </div>
 
       {/* Primary Metrics Grid */}
-      <div className="grid grid-cols-3 gap-2.5 pt-3 border-t border-zinc-200/50 dark:border-zinc-850">
+      <div className="grid grid-cols-3 gap-2.5 pt-3 border-t border-zinc-200/50 dark:border-zinc-800">
         <div className="flex flex-col items-center p-2 rounded-xl bg-zinc-50 dark:bg-zinc-800/25">
           <Timer className="w-4 h-4 text-blue-500 mb-1" />
           <span className="text-[9px] text-zinc-500 dark:text-zinc-300 font-bold">CPU Time</span>
-          <span className="text-xs font-mono font-extrabold text-zinc-850 dark:text-zinc-100">
+          <span className="text-xs font-mono font-extrabold text-zinc-800 dark:text-zinc-100">
             {stats.executionTime.toFixed(2)} ms
           </span>
         </div>
@@ -51,7 +51,7 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({ stats, algorithmName }) 
         <div className="flex flex-col items-center p-2 rounded-xl bg-zinc-50 dark:bg-zinc-800/25">
           <Compass className="w-4 h-4 text-amber-500 mb-1" />
           <span className="text-[9px] text-zinc-500 dark:text-zinc-300 font-bold">Visited</span>
-          <span className="text-xs font-mono font-extrabold text-zinc-850 dark:text-zinc-100">
+          <span className="text-xs font-mono font-extrabold text-zinc-800 dark:text-zinc-100">
             {stats.visitedNodesCount}
           </span>
         </div>
@@ -59,14 +59,14 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({ stats, algorithmName }) 
         <div className="flex flex-col items-center p-2 rounded-xl bg-zinc-50 dark:bg-zinc-800/25">
           <Route className="w-4 h-4 text-green-500 mb-1" />
           <span className="text-[9px] text-zinc-500 dark:text-zinc-300 font-bold">Path Cost</span>
-          <span className="text-xs font-mono font-extrabold text-zinc-850 dark:text-zinc-100">
+          <span className="text-xs font-mono font-extrabold text-zinc-800 dark:text-zinc-100">
             {stats.pathCost}
           </span>
         </div>
       </div>
 
       {/* Advanced Performance & Grid Details */}
-      <div className="space-y-2 pt-3 border-t border-zinc-200/50 dark:border-zinc-850 text-[10px] text-zinc-650 dark:text-zinc-200">
+      <div className="space-y-2 pt-3 border-t border-zinc-200/50 dark:border-zinc-800 text-[10px] text-zinc-650 dark:text-zinc-200">
         <div className="flex justify-between items-center">
           <span className="flex items-center gap-1 font-semibold text-zinc-600 dark:text-zinc-300">
             <BarChart4 className="w-3.5 h-3.5 text-zinc-400" />
