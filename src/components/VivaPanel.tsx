@@ -64,27 +64,27 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
         {/* Node Status */}
         <div className="space-y-3 bg-zinc-50 dark:bg-zinc-800/20 p-3 rounded-xl border border-zinc-200/40 dark:border-zinc-850">
           <div>
-            <span className="text-zinc-400 block text-[10px] uppercase">Active Pathfinder</span>
-            <span className="font-bold text-zinc-800 dark:text-zinc-150">{algorithm}</span>
+            <span className="text-zinc-500 dark:text-zinc-300 block text-[10px] uppercase font-bold">Active Pathfinder</span>
+            <span className="font-extrabold text-zinc-800 dark:text-zinc-100">{algorithm}</span>
           </div>
 
           <div className="flex items-center gap-4">
             <div>
-              <span className="text-zinc-400 block text-[10px] uppercase">Current Node</span>
+              <span className="text-zinc-500 dark:text-zinc-300 block text-[10px] uppercase font-bold">Current Node</span>
               {snapshot?.currentNode ? (
-                <span className="font-mono font-bold text-zinc-750 dark:text-zinc-200">
+                <span className="font-mono font-extrabold text-zinc-800 dark:text-zinc-100">
                   Node ({snapshot.currentNode.row}, {snapshot.currentNode.col})
                 </span>
               ) : (
-                <span className="text-zinc-400 font-mono">-</span>
+                <span className="text-zinc-450 font-mono">-</span>
               )}
             </div>
             {snapshot?.parentNode && (
               <div className="flex items-center gap-1">
                 <ArrowRight className="w-3.5 h-3.5 text-zinc-400" />
                 <div>
-                  <span className="text-zinc-400 block text-[10px] uppercase">Parent</span>
-                  <span className="font-mono font-bold text-zinc-750 dark:text-zinc-200">
+                  <span className="text-zinc-500 dark:text-zinc-300 block text-[10px] uppercase font-bold">Parent</span>
+                  <span className="font-mono font-extrabold text-zinc-800 dark:text-zinc-100">
                     ({snapshot.parentNode.row}, {snapshot.parentNode.col})
                   </span>
                 </div>
@@ -94,24 +94,24 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
 
           <div className="grid grid-cols-3 gap-2 border-t border-zinc-200/50 dark:border-zinc-850 pt-2 font-mono text-[10px]">
             <div>
-              <span className="text-zinc-400">Distance (g)</span>
-              <p className="font-bold text-zinc-850 dark:text-zinc-150">
+              <span className="text-zinc-500 dark:text-zinc-300 block font-bold">Distance (g)</span>
+              <p className="font-extrabold text-zinc-800 dark:text-zinc-100 text-xs mt-0.5">
                 {snapshot?.currentNode?.distance !== undefined && snapshot.currentNode.distance !== Infinity
                   ? snapshot.currentNode.distance
                   : '-'}
               </p>
             </div>
             <div>
-              <span className="text-zinc-400">Heuristic (h)</span>
-              <p className="font-bold text-zinc-850 dark:text-zinc-150">
+              <span className="text-zinc-500 dark:text-zinc-300 block font-bold">Heuristic (h)</span>
+              <p className="font-extrabold text-zinc-800 dark:text-zinc-100 text-xs mt-0.5">
                 {snapshot?.currentNode?.heuristicDistance !== undefined
                   ? snapshot.currentNode.heuristicDistance
                   : '-'}
               </p>
             </div>
             <div>
-              <span className="text-zinc-400">Total (f)</span>
-              <p className="font-bold text-green-600 dark:text-green-400">
+              <span className="text-zinc-500 dark:text-zinc-300 block font-bold">Total (f)</span>
+              <p className="font-extrabold text-green-600 dark:text-green-400 text-xs mt-0.5">
                 {snapshot?.currentNode?.totalDistance !== undefined && snapshot.currentNode.totalDistance !== Infinity
                   ? snapshot.currentNode.totalDistance
                   : '-'}
@@ -123,7 +123,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
         {/* Data Structure Contents */}
         <div className="space-y-2 flex flex-col justify-between">
           <div>
-            <span className="text-zinc-400 block text-[10px] uppercase flex items-center gap-1 mb-1">
+            <span className="text-zinc-500 dark:text-zinc-300 block text-[10px] uppercase flex items-center gap-1 mb-1 font-bold">
               <Columns className="w-3 h-3 text-purple-500" />
               Active Buffer / Heap Items ({snapshot?.openSet.length || 0})
             </span>
@@ -133,7 +133,7 @@ export const VivaPanel: React.FC<VivaPanelProps> = ({
                 {slicedOpenSet.map((node, idx) => (
                   <span
                     key={idx}
-                    className="text-[9px] font-mono bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800/80 px-1.5 py-0.5 rounded text-zinc-605 dark:text-zinc-350"
+                    className="text-[9px] font-mono bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800/80 px-1.5 py-0.5 rounded text-zinc-800 dark:text-zinc-200 font-semibold"
                   >
                     ({node.row},{node.col})
                     {node.totalDistance > 0 && ` f:${node.totalDistance}`}

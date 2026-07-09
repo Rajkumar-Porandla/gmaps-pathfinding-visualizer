@@ -213,7 +213,7 @@ export const ComparisonDashboard: React.FC<ComparisonDashboardProps> = ({
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left border-collapse">
             <thead>
-              <tr className="border-b border-zinc-200 dark:border-zinc-800 text-[10px] uppercase text-zinc-450">
+              <tr className="border-b border-zinc-200 dark:border-zinc-800 text-[10px] uppercase text-zinc-500 dark:text-zinc-300 font-bold">
                 <th className="py-2.5 px-3">Algorithm</th>
                 <th className="py-2.5 px-3 text-right">Time (ms)</th>
                 <th className="py-2.5 px-3 text-right">Visited Nodes</th>
@@ -228,7 +228,7 @@ export const ComparisonDashboard: React.FC<ComparisonDashboardProps> = ({
                   key={r.algorithm}
                   className="border-b border-zinc-100 dark:border-zinc-850 hover:bg-zinc-50 dark:hover:bg-zinc-800/10"
                 >
-                  <td className="py-3 px-3 font-semibold text-zinc-800 dark:text-zinc-250">
+                  <td className="py-3 px-3 font-bold text-zinc-800 dark:text-zinc-100">
                     {r.name}
                   </td>
                   <td className="py-3 px-3 text-right font-mono">
@@ -236,7 +236,7 @@ export const ComparisonDashboard: React.FC<ComparisonDashboardProps> = ({
                       className={`px-1.5 py-0.5 rounded ${
                         highlights.fastest === r.algorithm
                           ? 'bg-green-150 text-green-700 dark:bg-green-950/40 dark:text-green-400 font-bold'
-                          : 'text-zinc-600 dark:text-zinc-400'
+                          : 'text-zinc-650 dark:text-zinc-200'
                       }`}
                     >
                       {r.executionTime.toFixed(2)} ms
@@ -247,7 +247,7 @@ export const ComparisonDashboard: React.FC<ComparisonDashboardProps> = ({
                       className={`px-1.5 py-0.5 rounded ${
                         highlights.efficient === r.algorithm
                           ? 'bg-purple-100 text-purple-700 dark:bg-purple-950/30 dark:text-purple-400 font-bold'
-                          : 'text-zinc-600 dark:text-zinc-400'
+                          : 'text-zinc-650 dark:text-zinc-200'
                       }`}
                     >
                       {r.visitedNodesCount}
@@ -258,13 +258,13 @@ export const ComparisonDashboard: React.FC<ComparisonDashboardProps> = ({
                       className={`px-1.5 py-0.5 rounded ${
                         highlights.shortest === r.algorithm
                           ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/30 dark:text-blue-400 font-bold'
-                          : 'text-zinc-600 dark:text-zinc-400'
+                          : 'text-zinc-650 dark:text-zinc-200'
                       }`}
                     >
                       {r.status === 'NO_PATH' ? '-' : r.pathCost}
                     </span>
                   </td>
-                  <td className="py-3 px-3 text-right font-mono text-zinc-500 dark:text-zinc-450">
+                  <td className="py-3 px-3 text-right font-mono text-zinc-600 dark:text-zinc-200">
                     {r.memoryEstimate.toFixed(1)} KB
                   </td>
                   <td className="py-3 px-3 text-center">

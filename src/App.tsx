@@ -847,6 +847,15 @@ export default function App() {
 
         {/* Right Column - Map Canvas & Live Inspector Cards */}
         <div className="lg:col-span-3 space-y-6">
+          <Grid
+            grid={grid}
+            onNodeMouseDown={handleMouseDown}
+            onNodeMouseEnter={handleMouseEnter}
+            onNodeMouseUp={handleMouseUp}
+            onNodeKeyDown={handleKeyDown}
+            isAnimating={isAnimating && !isPaused}
+          />
+
           {isVivaEnabled && (
             <VivaPanel
               snapshot={currentSnapshot}
@@ -864,15 +873,6 @@ export default function App() {
               onExportComparison={handleExportComparison}
             />
           )}
-
-          <Grid
-            grid={grid}
-            onNodeMouseDown={handleMouseDown}
-            onNodeMouseEnter={handleMouseEnter}
-            onNodeMouseUp={handleMouseUp}
-            onNodeKeyDown={handleKeyDown}
-            isAnimating={isAnimating && !isPaused}
-          />
         </div>
       </main>
 
