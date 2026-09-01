@@ -115,3 +115,10 @@ Press these keys during simulation to trigger visualizer behaviors:
 - **CSS Containment**: Cells use CSS `contain: layout style paint;` boundaries, limiting reflow calculations to modified coordinates.
 - **Bypassing React Reconciliation**: Visited and path routing cells paint classes directly to DOM elements during animation, keeping React render updates at $0$ until playback finishes. This maintains a steady 60 FPS even on large 60x40 grids.
 - **Verbatim TS module syntax**: Compiles cleanly with zero errors under strict TypeScript type safety requirements.
+
+
+## 🧭 Supported Algorithms
+- A* Search (Manhattan & Euclidean Heuristics)
+- Dijkstra's Algorithm
+- Breadth-First Search (BFS)
+- Depth-First Search (DFS)
